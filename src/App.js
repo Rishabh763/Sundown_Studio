@@ -3,6 +3,7 @@ import video from "./assets/video/video.mp4";
 import logo from "./assets/images/64d3dd9edfb41666c35b15c2_Sundown logo.svg";
 import gsap from "gsap";
 import Swip from "./components/Swip";
+import { RiGlobalLine } from "react-icons/ri";
 
 // Import Swiper styles
 
@@ -31,7 +32,7 @@ function App() {
     function swiperAnimation() {
         const i = document.querySelector(".indicator");
         const p4 = document.querySelector(".page4");
-        
+
         const onMouseMove = (event) => {
 
         const offsetY = event.clientY - p4.getBoundingClientRect().top;
@@ -240,14 +241,36 @@ function App() {
           </div>
           <Swip />
           <div className="page5"></div>
+        <div className="footer">
+            <div className="container">
+                <div className="link">
+                    <a href="#">work</a>
+                    <a href="#">studio</a>
+                    <a href="#">contact</a>
+                </div>
+                <div className="form">
+                    <h5>Get industry insights and creative inspiration straight to your inbox.</h5>
+                    <div class="group">
+                        <input type="text" placeholder="Email address" />
+                        <button>&gt;</button>
+                    </div>
+                </div>
+            </div>
+          <div className="gooey1"></div>
+          <div className="gooey2"></div>
+          <div className="gooey3"></div>
+          
+          <h1>Sundown</h1>
+          <div className="footer-bottom">
+            <h6>copyright &copy; Sundown Studio</h6>
+            <h6><RiGlobalLine />brooklyn,NY</h6>
+            <h6>instagram</h6>
+            <h6>linkedin</h6>
+          </div>
+        </div>
         </main>
         <div className="full-scr">
           <div className="full-div1"></div>
-        </div>
-        <div className="footer">
-          <div className="footer-div"></div>
-          <h1>Sundown</h1>
-          <div className="footer-bottom"></div>
         </div>
       </div>
     </>

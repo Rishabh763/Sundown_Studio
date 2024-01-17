@@ -394,6 +394,7 @@ nav h3 {
   width: 100%;
   background-color: #eFEAE3;
   padding: 10vw 2vw;
+  padding-left: 4vw;
 
   cursor: none;
   transition: cursor 0.3s ease-in-out;
@@ -440,33 +441,166 @@ nav h3 {
 .page5 {
   height: 100vh;
   width: 100%;
-  /* background-color: #eFEAE3; */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .footer {
   position: fixed;
-  height: 105vh;
+  height: 100vh;
   width: 100%;
   background-color: #000;
   color: #fff;
-  z-index: 9;
+  z-index: -1;
   bottom: 0;
   display: flex;
-  /* align-items: flex-end; */
   justify-content: flex-end;
   flex-direction: column;
   padding: 1vw 3vw;
+
+  overflow: hidden;
 }
 
 .footer h1 {
-  font-size: 23vw;
+  font-size: 22.5vw;
 }
 
-.footer-div {
-  height: 20vh;
-  width: 100%;
+.footer>:where(.gooey1,.gooey2,.gooey3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30vh;
+  width: 120%;
   background-color: red;
+  filter: blur(40px);
 }
+
+.footer>.gooey1{
+  top: -50vh;
+  height: 75vh;
+  left: -5vw;
+  
+  animation-name: vib1;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+
+
+.footer>.gooey3{
+  top: -50vh;
+  height: 90vh;
+  animation-name: vib3;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vib1 {
+  0%, 100% {transform:rotate(-10deg) translateX(-20%)}
+  25%{
+    transform: rotate(-5deg) translateX(-10%);
+  }
+  75%{
+    transform: rotate(-15deg) translateX(-30%);
+  }
+  
+}
+
+
+@keyframes vib3 {
+  
+  0%, 100% {transform: rotate(15deg) translateX(30%)}
+  25%{
+    transform: rotate(10deg) translateX(20%);
+  }
+  75%{
+    transform: rotate(20deg) translateX(40%);
+  }
+  
+}
+
+.footer>.container{
+  margin-top: 5vw;
+
+  padding-inline: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer>.container>.link{
+ 
+
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+}
+
+.footer>.container>.link>a{
+  display: inline-block;
+  font-size: 2.5vw;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  font-family: 700;
+  transition: color 0.3s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.footer>.container>.link>a:hover{
+  color: #ffffffa0;
+}
+
+.footer>.container>.form{
+  width: 30%;
+  z-index: 1;
+  font-size: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer>.container>.form>h5{
+  color: white;
+}
+
+.group {
+  border-bottom: 2px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group>input {
+  width: 80%;
+  background-color: transparent;
+  font-size: 2vw;
+  border: none;
+  color: white;
+}
+
+.group>button {
+  width: 2vw;
+  font-size: 2vw;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.group>input::placeholder {
+  color: #ffffffa0;
+  font-weight: 300;
+}
+
+
 
 .footer-bottom {
   border-top: 1px solid #dadada;
@@ -491,6 +625,24 @@ nav h3 {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
+}
+
+.footer>.footer-bottom{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer>.footer-bottom>h6{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.2vw;
+  font-weight: 200;
+  cursor: pointer;
 }
 
 @media (max-width:600px) {
@@ -717,3 +869,5 @@ nav h3 {
     
   }
 }
+
+
