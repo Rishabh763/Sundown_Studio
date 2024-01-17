@@ -4,6 +4,7 @@ import logo from "./assets/images/64d3dd9edfb41666c35b15c2_Sundown logo.svg";
 import gsap from "gsap";
 import Swip from "./components/Swip";
 import { RiGlobalLine } from "react-icons/ri";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 // Import Swiper styles
 
@@ -252,7 +253,7 @@ function App() {
                     <h5>Get industry insights and creative inspiration straight to your inbox.</h5>
                     <div class="group">
                         <input type="text" placeholder="Email address" />
-                        <button>&gt;</button>
+                        <button><MdOutlineArrowRightAlt /></button>
                     </div>
                 </div>
             </div>
