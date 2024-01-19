@@ -15,6 +15,10 @@
   src: url(./assets/font/NeueHaasDisplayRoman.ttf);
 }
 
+::selection{
+  background-color: black;
+  color: #fE320A;
+}
 
 * {
   margin: 0;
@@ -35,8 +39,6 @@ html, body {
 } */
 
 main {
-  /* background-color: .000; */
-  position: relative;
   z-index: 10;
 }
 
@@ -66,14 +68,14 @@ nav {
 }
 
 .nav-part2 h4 {
-  padding: 10px 20px;
-  border: 1px solid .0000003c;
-  border-radius: 50px;
+  padding: 1vw 2vw;
+  border: 1px solid #0000003c;
+  border-radius: 100vw;
   font-weight: 500;
-  color: .000000bb;
+  color: #000000bb;
   transition: all ease 0.4s;
   position: relative;
-  font-size: 18px;
+  font-size: 1.5vw;
   overflow: hidden;
 }
 
@@ -154,7 +156,7 @@ nav h3 {
   width: 100%;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  filter: blur(10px);
+  filter: blur(0.8vw);
   position: absolute;
 }
 
@@ -170,7 +172,7 @@ nav h3 {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  filter: blur(25px);
+  filter: blur(2vw);
 }
 
 .hero-3 {
@@ -179,7 +181,7 @@ nav h3 {
   position: absolute;
   width: 30vw;
   border-radius: 50%;
-  filter: blur(25px);
+  filter: blur(2vw);
   animation-name: anime1;
   animation-duration: 5s;
   animation-timing-function: linear;
@@ -303,7 +305,7 @@ nav h3 {
 
   top: 58%;
   left: 25%;
-  filter: blur(20px);
+  filter: blur(1.5vw);
   animation-name: gooey;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -314,12 +316,12 @@ nav h3 {
 
 @keyframes gooey {
   from {
-      filter: blur(20px);
+      filter: blur(1.5vw);
       transform: translate(10%, -10%) skew(0);
   }
 
   to {
-      filter: blur(30px);
+      filter: blur(2vw);
       transform: translate(-10%, 10%) skew(-12deg);
   }
 }
@@ -371,6 +373,44 @@ nav h3 {
   top: 0;
 }
 
+.page3>button{
+  margin: 2vw 5vw;
+  font-size: 2vw;
+  padding: 1vw 2vw;
+  border: 1px solid #0000003c;
+  border-radius: 100vw;
+  font-weight: 500;
+  transition: all ease 0.4s;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* .page3>button:hover{
+  color: white;
+} */
+
+.page3>button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  bottom: -100%;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+.page3>button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
 
 
 .fixed-image {
@@ -396,15 +436,14 @@ nav h3 {
   padding: 10vw 2vw;
   padding-left: 4vw;
 
-  cursor: none;
-  transition: cursor 0.3s ease-in-out;
+  /* transition: cursor 0.3s ease-in-out; */
 }
 
 .indicator{
   position: absolute;
   top: 0;
   left: 0;
-  width: 6rem;
+  width: 6vw;
   aspect-ratio: 1;
   transform: translate(-50%,-50%);
   border-radius: 50%;
@@ -417,7 +456,7 @@ nav h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   pointer-events: none;
 
 }
@@ -431,6 +470,9 @@ nav h3 {
   width: 30%;
   border-left: 1px solid #aeadad;
   padding: 0 2vw;
+
+  transition: cursor 0.3s ease-in-out;
+  cursor: none;
 }
 
 .swiper-slide>p{
@@ -447,7 +489,7 @@ nav h3 {
 
 .footer {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #000;
   color: #fff;
@@ -472,7 +514,7 @@ nav h3 {
   height: 30vh;
   width: 120%;
   background-color: red;
-  filter: blur(40px);
+  filter: blur(2.5vw);
 }
 
 .footer>.gooey1{
@@ -531,8 +573,7 @@ nav h3 {
   justify-content: space-between;
 }
 
-.footer>.container>.link{
- 
+.link{
 
   display: flex;
   gap: 0.5rem;
@@ -541,7 +582,7 @@ nav h3 {
   background-color: transparent;
 }
 
-.footer>.container>.link>a{
+.link>a{
   display: inline-block;
   font-size: 2.5vw;
   text-transform: capitalize;
@@ -553,7 +594,7 @@ nav h3 {
   cursor: pointer;
 }
 
-.footer>.container>.link>a:hover{
+.link>a:hover{
   color: #ffffffa0;
 }
 
@@ -611,20 +652,21 @@ nav h3 {
 .full-scr {
   height: 100vh;
   width: 100%;
-  background-color: .00000070;
+  background-color: #00000070;
   position: fixed;
   z-index: 99;
   top: -100%;
   transition: all ease 0.5s;
 }
 
+
+
 .full-div1 {
   height: 50%;
   width: 100%;
-  background-color: #eFEAE3;
+  background-color: #000;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
 }
 
 .footer>.footer-bottom{
@@ -668,7 +710,7 @@ nav h3 {
       display: none;
   }
 
-  nav h3 {
+  nav>h3 {
       display: block;
       padding: 3vw 5vw;
       border: 1px solid #ababab;
@@ -676,6 +718,7 @@ nav h3 {
       font-size: 4vw;
       font-weight: 200;
       padding-left: 10vw;
+      z-index: 1000;
   }
 
   .center {
@@ -803,13 +846,21 @@ nav h3 {
 
       top: 58%;
       left: 25%;
-      filter: blur(20px);
+      filter: blur(1.5vw);
       animation-name: gooey;
       animation-duration: 6s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
       animation-timing-function: ease-in-out;
 
+  }
+
+  .indicator{
+    display: none;
+  }
+
+  .footer>.container{
+    flex-direction: column;
   }
 
 

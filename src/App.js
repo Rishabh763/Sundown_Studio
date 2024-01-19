@@ -5,6 +5,7 @@ import gsap from "gsap";
 import Swip from "./components/Swip";
 import { RiGlobalLine } from "react-icons/ri";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import { HiMiniArrowLongRight } from "react-icons/hi2";
 
 // Import Swiper styles
 
@@ -187,6 +188,7 @@ function App() {
             </div>
             <div className="gooey"></div>
           </div>
+
           <div className="page3">
             <div className="elem-container">
               <div
@@ -239,6 +241,7 @@ function App() {
                 <h2>Play New Kidvision</h2>
               </div>
             </div>
+              <button>All Projects <HiMiniArrowLongRight/></button>
           </div>
           <Swip />
           <div className="page5"></div>
@@ -271,7 +274,13 @@ function App() {
         </div>
         </main>
         <div className="full-scr">
-          <div className="full-div1"></div>
+          <div className="full-div1">
+               <div className="link">
+                    <a href="#">work</a>
+                    <a href="#">studio</a>
+                    <a href="#">contact</a>
+                </div>
+          </div>
         </div>
       </div>
     </>
